@@ -3,10 +3,10 @@ Hey everyone today we'd try to solve the io.netgarage CTF puzzles.
 
 You can connect to their SSH Server using the following command in terminal
 
-{% highlight ruby %}
+'''sh
 level1@io:/levels$ ls -l level01*
 -r-sr-x--- 1 level2 level1 1184 Jan 13  2014 level01
-{% endhighlight %}
+'''
 
 
 '''sh
