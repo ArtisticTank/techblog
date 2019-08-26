@@ -167,13 +167,14 @@ XNWFtWKWHhaaXoKI
 YEAH! The password for our next challenge 'level02' is 'XNWFtWKWHhaaXoKI' 
 So Let's close this session and login using 
 
->*level1@io.netgarage.org*
+>*level2@io.netgarage.org*
 
 >Password : *XNWFtWKWHhaaXoKI*
 
 But that's topic of our next writeup.
 See you there.
-GoodLuck.
+
+*GoodLuck.*
 
 
 
