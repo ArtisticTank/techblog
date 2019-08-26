@@ -165,7 +165,7 @@ XNWFtWKWHhaaXoKI
 ```
 
 YEAH! The password for our next challenge 'level02' is 'XNWFtWKWHhaaXoKI' 
-So Let's close this session and login using 
+So Let's close this session and create another **SSH** session and login using 
 
 >*level2@io.netgarage.org*
 
