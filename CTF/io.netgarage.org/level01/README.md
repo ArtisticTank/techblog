@@ -1,7 +1,7 @@
 
-### io.netgarage/level 01
+# io.netgarage / level 01
 
-Hey fellas today we'd try to solve the ```io.netgarage``` CTF level01 puzzle.
+Hey fellas today we'd try to solve the ```io.netgarage``` **CTF level01** puzzle.
 
 ### Establish Connection
 You can connect to their SSH Server using the following command in terminal
@@ -12,12 +12,12 @@ root@kali:~# ssh level1@io.netgarage.org
 > Password : level1
 
 ### Normal Walkthrough
-You may find the challenges in */levels* directory navigate there by issuing the command
+You may find the challenges in ```/levels``` directory navigate there by issuing the command
 ```sh
 level1@io:~$ cd /levels
 level1@io:/levels$
 ```
-Our first challenge is a file called as 'level01'
+Our first challenge is a file called as ```level01```
 ```sh
 level1@io:/levels$ ls -l level01
 -r-sr-x--- 1 level2 level1 1184 Jan 13  2014 level01
@@ -34,7 +34,7 @@ Let's check the filetype to examine our target file.
 level1@io:/levels$ file level01
 level01: setuid ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
 ```
-It is ELF 32-bit LSB executable which indicates that it is binary executable file which we need to reverse engineer.
+It is ```ELF 32-bit LSB``` executable which indicates that it is binary executable file which we need to reverse engineer.
 Let's execute it first and check what's the behavior of the executable file
 
 ```sh
@@ -83,11 +83,11 @@ __bss_start
 _edata
 _end
 ```
-We can determine that on entering right password we can find the password for level2 at location /home/level2/.pass
-So I tried directly navigating to the directory and check the password for level2 but our current user 'level1' do not have sufficient permissions to access the file.
+We can determine that on entering right password we can find the password for level2 at location ```/home/level2/.pass```
+So I tried directly navigating to the directory and check the password for level2 but our current user ```level1``` do not have sufficient permissions to access the file.
 So maybe the only way to access the password file would be by feeding the right 3 digit integer to the level01 executable.
 
-# GDB
+### GDB
 Here the fun part starts.
 Let's examine the executable by disassembling using gdb
 
@@ -123,7 +123,7 @@ Dump of assembler code for function main:
 End of assembler dump.
 ```
 We can observe on line ```sh 0x0804808f <+15>:	cmp    $0x10f,%eax  ``` there is a comparison operation performed so this indicates that
-some value in %eax register (probably the digit we enter) is compared with the hexadecimal value *0x10f*
+some value in %eax register (probably the digit we enter) is compared with the hexadecimal value ```0x10f```
 
 So I wrote a quick python script which takes hexadecimal value as a command line argument and outputs the decimal equivalent for same
 ```python
@@ -162,8 +162,8 @@ XNWFtWKWHhaaXoKI
 
 YEAH! The password for our next challenge 'level02' is 'XNWFtWKWHhaaXoKI' 
 So Let's close this session and login using 
-ssh level1@io.netgarage.org
-Password : XNWFtWKWHhaaXoKI
+**level1@io.netgarage.org**
+Password : **XNWFtWKWHhaaXoKI**
 
 But that's topic of our next writeup.
 See you there.
