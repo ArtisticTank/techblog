@@ -3,17 +3,17 @@ Hey everyone today we'd try to solve the io.netgarage CTF puzzles.
 
 You can connect to their SSH Server using the following command in terminal
 
-'''
+'''sh
 root@kali:~# ssh level1@io.netgarage.org
 '''
 Password : level1
 
 You may find the challenge in /levels directory navigate there by command
-'''
+'''sh
 level1@io:~$ cd /levels
 '''
 Our first challenge is a file called as level01
-'''
+'''sh
 level1@io:/levels$ ls -l level01
 -r-sr-x--- 1 level2 level1 1184 Jan 13  2014 level01
 '''
