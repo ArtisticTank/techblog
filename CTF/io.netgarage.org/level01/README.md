@@ -9,7 +9,7 @@ You can connect to their SSH Server using the following command in terminal
 ```sh
 root@kali:~# ssh level1@io.netgarage.org
 ```
->> Password : level1
+> Password : *level1*
 
 ## Normal Walkthrough
 All the challenges are located in ```/levels``` directory, navigate there by issuing the command
@@ -127,7 +127,7 @@ Dump of assembler code for function main:
 End of assembler dump.
 ```
 We can observe on line ```sh 0x0804808f <+15>:	cmp    $0x10f,%eax  ``` there is a comparison operation performed so this indicates that
-some value in %eax register (probably the digit we enter) is compared with the hexadecimal value ```0x10f```
+some value in ```%eax``` register (probably the digit we enter) is compared with the hexadecimal value ```0x10f```
 
 So I wrote a quick python script which takes hexadecimal value as a command line argument and outputs the decimal equivalent for same
 ```python
@@ -166,8 +166,10 @@ XNWFtWKWHhaaXoKI
 
 YEAH! The password for our next challenge 'level02' is 'XNWFtWKWHhaaXoKI' 
 So Let's close this session and login using 
-**level1@io.netgarage.org**
-Password : **XNWFtWKWHhaaXoKI**
+
+>*level1@io.netgarage.org*
+
+>Password : *XNWFtWKWHhaaXoKI*
 
 But that's topic of our next writeup.
 See you there.
