@@ -93,7 +93,7 @@ So maybe the only way to access the password file would be by feeding the right 
 
 ## GDB
 Here the fun part starts.
-Let's examine the executable by disassembling using gdb
+Let's examine the executable by disassembling using *gdb*
 
 ```sh
 level1@io:/levels$ gdb level01
