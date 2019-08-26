@@ -164,7 +164,7 @@ sh-4.3$ cat /home/level2/.pass
 XNWFtWKWHhaaXoKI
 ```
 
-YEAH! The password for our next challenge 'level02' is 'XNWFtWKWHhaaXoKI' 
+YEAH! The password for our next challenge **level02* is **XNWFtWKWHhaaXoKI** 
 So Let's close this session and create another **SSH** session and login using 
 
 >*level2@io.netgarage.org*
