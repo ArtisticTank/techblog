@@ -3,18 +3,20 @@ Hey everyone today we'd try to solve the io.netgarage CTF puzzles.
 
 You can connect to their SSH Server using the following command in terminal
 
+'''
 root@kali:~# ssh level1@io.netgarage.org
-
+'''
 Password : level1
 
 You may find the challenge in /levels directory navigate there by command
-
+'''
 level1@io:~$ cd /levels
-
+'''
 Our first challenge is a file called as level01
-
+'''
 level1@io:/levels$ ls -l level01
 -r-sr-x--- 1 level2 level1 1184 Jan 13  2014 level01
+'''
 
 level1@io:/levels$ file level01
 level01: setuid ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
