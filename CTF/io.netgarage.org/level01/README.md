@@ -6,7 +6,7 @@ You can connect to their SSH Server using the following command in terminal
 ```sh
 root@kali:~# ssh level1@io.netgarage.org
 ```
-Password : level1
+#Password : level1
 
 ```sh
 level1@io:/levels$ ls -l level01*
@@ -25,20 +25,26 @@ Our first challenge is a file called as level01
 level1@io:/levels$ ls -l level01
 -r-sr-x--- 1 level2 level1 1184 Jan 13  2014 level01
 ```
-
+```sh
 level1@io:/levels$ file level01
 level01: setuid ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, not stripped
+```
 
+```sh
 level1@io:/levels$ ./level01
 Enter the 3 digit passcode to enter:
+```
 
+```sh
 level1@io:/levels$ cat level01
 ELF�4�4 (%%(((||h(��=�B�d������̀��1�1��< t�,0<	w
 k�
 �1�����؁�ø��M�P̀1���PS�ᙰ
                       ø�̀�L$���%̀�Enter the 3 digit passcode to enter: Congrats you found it, now read the password for level2 from /home/level2/.pass
 ��#-49>�C(KMS�Y�`���l���s���level01.asmfscanfskipwhitedoitexitscanfYouWinexitputsmainprompt1prompt2shell_start__bss_start_edata_end
+```
 
+```sh
 level1@io:/levels$ strings level01
 ,0<	w
 Enter the 3 digit passcode to enter: Congrats you found it, now read the password for level2 from /home/level2/.pass
@@ -65,7 +71,9 @@ _start
 __bss_start
 _edata
 _end
+```
 
+```sh
 level1@io:/levels$ gdb level01
 GNU gdb (Debian 7.12-6) 7.12.0.20161007-git
 Copyright (C) 2016 Free Software Foundation, Inc.
@@ -93,8 +101,8 @@ Dump of assembler code for function main:
    0x08048094 <+20>:	je     0x80480dc
    0x0804809a <+26>:	call   0x8048103
 End of assembler dump.
-
-
+```
+```python
 import sys
 def hextodecimal(digit):
     return int(digit, 16)
@@ -102,18 +110,21 @@ def hextodecimal(digit):
 if __name__ == "__main__":
     hexstring = sys.argv[1]
     print(hextodecimal(hexstring))
-
+```
+```sh
 root@kali:~/pythonworkspace# python hextodec.py 0x10f
 271
-
+```
+```sh
 level1@io:/levels$ ./level01 
 Enter the 3 digit passcode to enter: 271
 Congrats you found it, now read the password for level2 from /home/level2/.pass
 sh-4.3$ 
-
+```
+```sh
 sh-4.3$ cat /home/level2/.pass
 XNWFtWKWHhaaXoKI
-
+```
 
 
 
