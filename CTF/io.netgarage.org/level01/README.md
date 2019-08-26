@@ -15,9 +15,6 @@ level1@io:/levels$ ls -l level01*
 -r-sr-x--- 1 level2 level1 1184 Jan 13  2014 level01
 ```
 
-
-
-
 You may find the challenge in /levels directory navigate there by command
 ```sh
 level1@io:~$ cd /levels
