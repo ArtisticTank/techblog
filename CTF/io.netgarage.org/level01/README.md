@@ -1,5 +1,5 @@
 
-### Level01
+### Level 01
 
 Hey everyone today we'd try to solve the io.netgarage CTF level01 puzzle.
 
