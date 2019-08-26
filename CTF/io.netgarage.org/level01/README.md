@@ -1,7 +1,7 @@
 
 ### Level01
 
-Hey everyone today we'd try to solve the io.netgarage CTF puzzles.
+Hey everyone today we'd try to solve the io.netgarage CTF level01 puzzle.
 
 You can connect to their SSH Server using the following command in terminal
 
