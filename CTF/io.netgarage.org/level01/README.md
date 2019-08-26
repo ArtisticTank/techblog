@@ -1,17 +1,17 @@
 
-# io.netgarage / level 01
+# [io.netgarage](https://io.netgarage.org/) / level 01
 
 Hey fellas today we'd try to solve the ```io.netgarage``` **CTF level01** puzzle.
 
-### Establish Connection
+## Establish Connection
 You can connect to their SSH Server using the following command in terminal
 
 ```sh
 root@kali:~# ssh level1@io.netgarage.org
 ```
-> Password : level1
+>> Password : level1
 
-### Normal Walkthrough
+## Normal Walkthrough
 All the challenges are located in ```/levels``` directory, navigate there by issuing the command
 ```sh
 level1@io:~$ cd /levels
@@ -91,7 +91,7 @@ On directly printing the output of password file for level2 it throws *Permissio
 This is because our current user ```level1``` do not have sufficient permissions to access the file.
 So maybe the only way to access the password file would be by feeding the right 3 digit integer to the ```level01``` executable.
 
-### GDB
+## GDB
 Here the fun part starts.
 Let's examine the executable by disassembling using gdb
 
